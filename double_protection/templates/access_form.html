@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Аварийный доступ</h2>
+<form action="/answer" method="post">
+    <div class="form-group">
+        <label for="astronaut_id">Id астронавта</label>
+        <input type="text" class="form-control" id="astronaut_id" name="astronaut_id" required>
+    </div>
+    <div class="form-group">
+        <label for="astronaut_password">Пароль астронавта</label>
+        <input type="password" class="form-control" id="astronaut_password" name="astronaut_password" required>
+    </div>
+    <div class="form-group">
+        <label for="captain_id">Id капитана</label>
+        <input type="text" class="form-control" id="captain_id" name="captain_id" required>
+    </div>
+    <div class="form-group">
+        <label for="captain_token">Токен капитана</label>
+        <input type="text" class="form-control" id="captain_token" name="captain_token" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Доступ</button>
+</form>
+{% endblock %}
